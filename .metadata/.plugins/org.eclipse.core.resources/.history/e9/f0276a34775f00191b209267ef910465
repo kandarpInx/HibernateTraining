@@ -1,0 +1,42 @@
+package com.demo.ManyToMany;
+
+import org.apache.log4j.Logger;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+
+public class App 
+{
+	
+    public static void main( String[] args ) {
+    	
+    	final static Logger logger = Logger.getLogger(App.class);	
+    	Employee emp = new Employee();
+    	emp.setEmp_name("Kandarp Dave");
+    	
+    	Vehicle v1 = new Vehicle();
+    	v1.setVehicle_name("Car");
+    	Vehicle v2 = new Vehicle();
+    	v2.setVehicle_name("Bike");
+    	
+    	emp.getVehicle().add(v1);
+    	emp.getVehicle().add(v2);
+    	
+    	v1.getEmployee().add(emp);
+    	v2.getEmployee().add(emp);
+    	
+    	SessionFactory sf = new Configuration().configure().buildSessionFactory();
+    	
+    	Session session = sf.openSession();
+    	
+    	session.beginTransaction();
+    	session.save(emp);
+    	session.save(v1);
+    	session.save(v2);
+    	
+    	session.getTransaction().commit();
+    	session.close();
+    	
+    }
+}

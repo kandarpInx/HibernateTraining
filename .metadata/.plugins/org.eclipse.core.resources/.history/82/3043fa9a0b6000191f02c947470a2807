@@ -1,0 +1,12 @@
+package com.demo.InheritanceSingleTable;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Vehicle {
+	
+	private int vehicleId;
+	private String vehicleName;
+	
+	
+}

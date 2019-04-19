@@ -1,0 +1,5 @@
+package com.demo.HQL_1;
+
+public class Student {
+
+}

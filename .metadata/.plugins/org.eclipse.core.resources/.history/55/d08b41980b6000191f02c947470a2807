@@ -1,0 +1,5 @@
+package com.demo.InheritanceSingleTable;
+
+public class Vehicle {
+
+}

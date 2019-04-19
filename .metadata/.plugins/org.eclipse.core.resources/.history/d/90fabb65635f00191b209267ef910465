@@ -1,0 +1,16 @@
+package com.demo.OneToOne;
+
+public class App 
+{
+    public static void main( String[] args ) {
+    	
+    	Employee emp = new Employee();
+    	emp.setEmp_name("Kandarp Dave");
+    	
+    	Employee emp1 = new Employee();
+    	emp.setEmp_name("Uday Desai");
+    	
+    	
+    	
+    }
+}

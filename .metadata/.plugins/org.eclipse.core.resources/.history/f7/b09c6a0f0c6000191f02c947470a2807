@@ -1,0 +1,18 @@
+package com.demo.InheritanceSingleTable;
+
+import javax.persistence.Entity;
+
+@Entity
+public class FourWheel extends Vehicle {
+
+	private String SteeringWheel;
+
+	public String getSteeringWheel() {
+		return SteeringWheel;
+	}
+
+	public void setSteeringWheel(String steeringWheel) {
+		SteeringWheel = steeringWheel;
+	}
+	
+}

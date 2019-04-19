@@ -1,0 +1,5 @@
+package com.demo.OneToOne;
+
+public class Vehicle {
+
+}

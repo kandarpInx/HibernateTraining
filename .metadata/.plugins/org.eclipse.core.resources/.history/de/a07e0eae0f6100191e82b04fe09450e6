@@ -1,0 +1,38 @@
+package com.demo.HQL_1;
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
+
+public class App {
+	public static void main(String[] args) {
+		
+		
+		
+		SessionFactory sf = new Configuration().configure().buildSessionFactory();
+		Session session = sf.openSession();
+		session.beginTransaction();
+		
+		/*
+		 * for(int i=0;i<10;i++) { Student student = new Student();
+		 * student.setStudentName("Student "+ (i+1)); session.save(student); }
+		 */
+		
+		@SuppressWarnings("rawtypes")
+		Query query = session.createQuery("from Student");
+		
+		List<Student> list = query.list();
+		
+		System.out.println(list.size());
+		
+		for(Student s : list) {
+			System.out.println(s.getStudentName());
+		}
+		
+		session.getTransaction().commit();
+		session.close();
+	}
+}

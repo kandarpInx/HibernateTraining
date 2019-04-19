@@ -1,0 +1,8 @@
+package com.demo.CascadeTypes;
+
+public class Employee {
+	
+	private int empId;
+	private String empName;
+
+}

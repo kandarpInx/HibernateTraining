@@ -1,0 +1,34 @@
+package com.demo.CRUD;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
+@org.hibernate.annotations.Entity(selectBeforeUpdate=TRUE)
+public class Employee {
+	
+	@Id @GeneratedValue
+	private int empId;
+	private String empName;
+	private String addr;
+	
+	public String getAddr() {
+		return addr;
+	}
+	public void setAddr(String addr) {
+		this.addr = addr;
+	}
+	public int getEmpId() {
+		return empId;
+	}
+	public void setEmpId(int empId) {
+		this.empId = empId;
+	}
+	public String getEmpName() {
+		return empName;
+	}
+	public void setEmpName(String empName) {
+		this.empName = empName;
+	}
+}

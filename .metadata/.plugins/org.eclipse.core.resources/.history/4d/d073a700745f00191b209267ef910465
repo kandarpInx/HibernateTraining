@@ -1,0 +1,10 @@
+package com.demo.ManyToMany;
+
+public class App 
+{
+    public static void main( String[] args ) {
+    	
+    	
+    	
+    }
+}

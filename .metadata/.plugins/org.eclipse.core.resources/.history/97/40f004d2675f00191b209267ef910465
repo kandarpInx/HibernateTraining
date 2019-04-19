@@ -1,0 +1,11 @@
+package com.demo.OneToMany;
+
+public class App 
+{
+    public static void main( String[] args ) {
+    	
+    	Employee emp = new Employee();
+    	emp.setEmp_name("Kandarp Dave");
+    	
+    }
+}

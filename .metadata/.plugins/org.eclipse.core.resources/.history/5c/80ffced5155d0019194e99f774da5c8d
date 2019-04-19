@@ -1,0 +1,15 @@
+package com.demo.EmbeddedAndEmbeddable;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	Student student1 = new Student();
+    	
+    	student1.setStudent_id(1);
+    	student1.setStudent_name("Kandarp");
+    	
+    	
+    	
+    }
+}

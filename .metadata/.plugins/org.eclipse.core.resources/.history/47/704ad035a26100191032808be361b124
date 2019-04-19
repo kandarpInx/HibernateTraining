@@ -1,0 +1,9 @@
+package com.demo.HQL_2;
+
+public class Employee {
+	
+	private int empId;
+	private String empName;
+	private int empSalary;
+
+}

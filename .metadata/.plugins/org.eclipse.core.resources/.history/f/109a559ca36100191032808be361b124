@@ -1,0 +1,29 @@
+package com.demo.HQL_2;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class App {
+	public static void main(String[] args) {
+		
+		SessionFactory sf = new Configuration().configure().buildSessionFactory();
+		Session session = sf.openSession();
+		session.beginTransaction();
+		
+		/* ******************************** insert records ***************************************** */
+		
+		/*
+		 * Random r = new Random();
+		 * 
+		 * for(int i=0; i<10; i++) { Employee emp = new Employee();
+		 * emp.setEmpName("Employee "+(i+1)); emp.setEmpSalary(r.nextInt(10000));
+		 * 
+		 * session.save(emp); }
+		 */
+		
+		/* **************************************************************************************** */
+		session.getTransaction().commit();
+		session.close();
+	}
+}

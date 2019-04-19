@@ -1,0 +1,30 @@
+package com.demo.HQLJoins;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+@Entity
+public class ProductDetails {
+
+	@Id @GeneratedValue
+	private int prodId;
+	private String prodName;
+	
+	@ManyToOne
+	private Customer cust;
+	
+	public int getProdId() {
+		return prodId;
+	}
+	public void setProdId(int prodId) {
+		this.prodId = prodId;
+	}
+	public String getProdName() {
+		return prodName;
+	}
+	public void setProdName(String prodName) {
+		this.prodName = prodName;
+	}
+}

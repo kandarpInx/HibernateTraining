@@ -1,0 +1,18 @@
+package com.demo.InheritanceSingleTable;
+
+public class App 
+{
+    public static void main( String[] args ) {
+    	
+    	Vehicle v1 = new Vehicle();
+    	v1.setVehicleName("Bicycle");
+    	
+    	FourWheel f1 = new FourWheel();
+    	f1.setVehicleName("Car");
+    	f1.setSteeringWheel("Steering type is wheel...!");
+    	
+    	TwoWheel t1 = new TwoWheel();
+    	t1.setVehicleName("Bike");
+    	t1.setSteeringHandle("Steering type is handle...!");
+    }
+}

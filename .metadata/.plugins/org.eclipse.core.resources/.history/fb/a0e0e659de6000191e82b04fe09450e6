@@ -1,0 +1,27 @@
+package com.demo.CRUD;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class App 
+{
+    public static void main( String[] args ) {
+    	
+    	Employee emp = new Employee();
+    	emp.setEmpName("Hardik Dave");
+    	emp.setAddr("Gandhinagar");
+    	
+    	SessionFactory sf = new Configuration().configure().buildSessionFactory();
+    	
+    	Session session = sf.openSession();
+    	session.beginTransaction();
+    	session.save(emp);
+    	
+    	System.out.println(session.get(Employee.class, id));
+    	
+    	session.getTransaction().commit();
+    	session.close();
+    	
+    }
+}

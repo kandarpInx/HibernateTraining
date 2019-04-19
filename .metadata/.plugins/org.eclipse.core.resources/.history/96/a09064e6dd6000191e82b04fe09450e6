@@ -1,0 +1,12 @@
+package com.demo.CRUD;
+
+public class App 
+{
+    public static void main( String[] args ) {
+    	
+    	Employee emp = new Employee();
+    	emp.setEmpName("Kandarp Dave");
+    	emp.setAddr("Junagadh");
+    	
+    }
+}

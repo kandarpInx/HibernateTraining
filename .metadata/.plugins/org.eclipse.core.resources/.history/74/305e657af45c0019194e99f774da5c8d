@@ -1,0 +1,34 @@
+package com.demo.FirstHibernateDemo;
+
+import java.util.Date;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+        Student s = new Student();
+        
+        s.setRollno(1);
+        s.setName("Kandarp");
+        s.setAddress("Address of student needs to be inserted here...");
+        s.setDateOfBirth(new Date());
+        
+        Configuration conf = new Configuration().configure();
+//        addAnnotatedClass(Student.class)
+        SessionFactory sf = conf.buildSessionFactory();
+        Session session = sf.openSession();
+        Transaction transaction = session.beginTransaction();
+        session.save(s);
+        transaction.commit();
+        session.close();
+        
+        s = null;
+        
+        
+    }
+}

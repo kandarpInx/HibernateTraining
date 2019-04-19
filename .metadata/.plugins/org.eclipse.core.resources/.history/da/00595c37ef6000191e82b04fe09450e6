@@ -1,0 +1,11 @@
+package com.demo.CascadeTypes;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Employee {
+	
+	private int empId;
+	private String empName;
+
+}

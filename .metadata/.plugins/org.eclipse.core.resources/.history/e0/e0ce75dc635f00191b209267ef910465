@@ -1,0 +1,27 @@
+package com.demo.OneToOne;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class App 
+{
+    public static void main( String[] args ) {
+    	
+    	Employee emp = new Employee();
+    	emp.setEmp_name("Kandarp Dave");
+    	
+    	Employee emp1 = new Employee();
+    	emp1.setEmp_name("Uday Desai");
+    	
+    	SessionFactory sf = new Configuration().configure().buildSessionFactory();
+    	
+    	Session session = sf.openSession();
+    	
+    	session.beginTransaction();
+    	session.save(emp);
+    	session.getTransaction().commit();
+    	session.close();
+    	
+    }
+}

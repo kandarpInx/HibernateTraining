@@ -1,0 +1,15 @@
+package com.demo.ManyToMany;
+
+public class App 
+{
+    public static void main( String[] args ) {
+    	
+    	Employee emp = new Employee();
+    	emp.setEmp_name("Kandarp Dave");
+    	
+    	Vehicle vehicle = new Vehicle();
+    	vehicle.setVehicle_name("Car");
+    	
+    	
+    }
+}

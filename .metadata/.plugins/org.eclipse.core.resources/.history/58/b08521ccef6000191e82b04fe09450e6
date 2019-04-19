@@ -1,0 +1,13 @@
+package com.demo.CascadeTypes;
+
+public class App 
+{
+    public static void main( String[] args ) {
+    	Employee emp = new Employee();
+    	emp.setEmpName("Kandarp Dave");
+    	
+    	EmployeeAddress empAddr = new EmployeeAddress();
+    	empAddr.setCity("Junagadh");
+    	
+    }
+}

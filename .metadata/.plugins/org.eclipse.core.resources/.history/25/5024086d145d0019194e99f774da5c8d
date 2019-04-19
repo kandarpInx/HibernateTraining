@@ -1,0 +1,13 @@
+package com.demo.EmbeddedAndEmbeddable;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Student {
+	
+	private int student_id;
+	private String student_name;
+	private Address home_address;
+	private Address school_address;
+
+}
